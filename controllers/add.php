@@ -1,8 +1,8 @@
 <?php
-require 'config/DB.php';
+require '../config/DB.php';
 
 $db = (new DB())->connect();
-// echo $db;
+
 if (isset($_POST['todo'])) {
     $todo = htmlspecialchars(trim($_POST['todo']));
     $current_date = date('Y-m-d H:i:s');
@@ -14,5 +14,5 @@ if (isset($_POST['todo'])) {
     $stmt->bindParam(':updated_at', $current_date);
     $stmt->execute();
 
-    header('Location: index.php');
+    header('Location: ../index.php');
 }

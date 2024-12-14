@@ -25,8 +25,4 @@ require_once 'bootstrap.php';
     </div>
 </section>
 
-<?php
-require_once 'src/components/footer.php';
-
-
-?>
+<?php require_once 'src/components/footer.php';?>
