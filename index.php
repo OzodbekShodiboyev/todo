@@ -12,11 +12,11 @@ require_once 'src/header.php';
 
                         <h6 class="mb-3">Todo List</h6>
 
-                        <form class="d-flex justify-content-center align-items-center mb-4" action="add.php" method="GET">
+                        <form class="d-flex justify-content-center align-items-center mb-4" action="add.php" method="POST">
                             <div data-mdb-input-init class="form-outline flex-fill">
                                 <input type="text" name="todo" class="form-control form-control-lg" placeholder="Todo Name" />
                             </div>
-                            <button type="submit" class="btn btn-primary btn-lg ms-2">Add</button>
+                            <input type="submit" name="submit" class="btn btn-primary btn-lg ms-2" value="Add" /> 
                         </form>
 
                         <ul class="list-group mb-0">
@@ -52,6 +52,7 @@ require_once 'src/header.php';
 <?php
 require_once 'src/footer.php';
 require_once 'config/DB.php';
+
 
 // $db = new DB('localhost', 'todo', 'root', '');
 
